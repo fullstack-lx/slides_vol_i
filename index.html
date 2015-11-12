@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Fullstack LX - Building web applications with React and Redux</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="description" content="Fullstack LX - Building web applications with React and Redux">
 		<meta name="author" content="Hakim El Hattab">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,15 +19,6 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -111,13 +102,55 @@
 						<p class="fragment"> Single directional data flow </p>
 					</section>
 
-
 					<section>
 						<h2> In comes Dan Abramov </h2>
 
+						<img src="img/dan.jpeg" height="248" width="248" />
+						<p class="fragment"> Hot reload </p>
+						<p class="fragment"> Time travelling </p>
+
+						<aside class="notes">
+							- Do you know why Hot reload while maintaining state is difficult with flux pattern?
+								- Stores contain state and if you want to change a store to change behaviour you lose the state
+							- What about time travelling?
+								- It is the ability to reproduce a previous state of the app
+						 		- By having all these different stores you never have a vision of the whole state of the app
+						</aside>
+					</section>
+
+					<section>
+						<h2> Redux was born! </h2>
+
+						<p class="fragment"> Single store </p>
+						<p class="fragment"> Reducers </p>
+
+						<aside class="notes">
+							- A single store that contains the whole state of the App and is only a container. No logic
+							- Reducers that are pure functions that receive a state and an action and return a new state
+						</aside>
+					</section>
+
+					<section>
+						<h2> Redux </h2>
+						<p> Functional programming mindset </p>
+						<p> </p>
+					</section>
+
+					<section>
+						<h2>A predictable state container for Javascript Apps</h2>
+						<p class="fragment">What does that mean?</p>
 
 					</section>
 
+					<section>
+						<h2> How does this influence React ? </h2>
+
+						<img class="fragment" width="640" height="480" src="http://i.giphy.com/9HsuhCHWWKc8M.gif" />
+
+					</section>
+					<section>
+
+					</section>
 				</section>
 
 				<section>
