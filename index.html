@@ -96,6 +96,7 @@
 					<section data-background="http://i.giphy.com/rzspAaesd8ltm.gif">
 						<h1 style="color:#333">MV* Era</h1>
 					</section>
+				</section>
 
 
 				<section>
@@ -121,6 +122,8 @@
 						<p class="fragment">Dependency Hell</p>
 						<p class="fragment">Hard to <b>predict</b> effects of a change</p>
 						<p class="fragment">Hard to trace data flow</p>
+						<p class="fragment">Slow development lifecycle</p>
+						<p class="fragment">Takes forever to test things and reproduce state</p>
 						<p class="fragment">The list goes on ...</p>
 
 					</section>
@@ -132,15 +135,39 @@
 						<p>Facebook's pattern for data flow</p>
 
 						<img class="fragment" src="img/flux.png" height="300" width="1000" />
-						<p class="fragment"> Single directional data flow </p>
+
+						<aside class="notes">
+
+						</aside>
+					</section>
+					<section>
+						<img src="img/flux.png" height="300" width="1000" />
+						<ul>
+							<li> Single directional data flow </li>
+							<li> Actions are just plain Javascript objects </li>
+							<li> A single dispatcher that sends actions to the stores </li>
+							<li> Stores contain the state and change their state </li>
+							<li> Stores tell the views to re-render </li>
+							<li> Views can create new actions </li>
+						</ul>
+					</section>
+
+					<section>
+						<h2> Did this solve all our frustrations ? </h2>
+					</section>
+
+					<section data-background="http://i.giphy.com/kX5tZqZWyKxMI.gif">
 					</section>
 
 					<section>
 						<h2> In comes Dan Abramov </h2>
 
 						<img src="img/dan.jpeg" height="248" width="248" />
-						<p class="fragment"> Hot reload </p>
-						<p class="fragment"> Time travelling </p>
+
+						<h3> Goal </h3>
+
+						<p> Hot reload </p>
+						<p> Time travelling </p>
 
 						<aside class="notes">
 							- Do you know why Hot reload while maintaining state is difficult with flux pattern?
