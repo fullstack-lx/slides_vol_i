@@ -27,6 +27,9 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			// Live reload
+			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+			 ':35729/livereload.js?snipver=1"></' + 'script>')
 		</script>
 
 		<!--[if lt IE 9]>
@@ -104,6 +107,10 @@
 					</section>
 					<section data-background="http://i.giphy.com/rzspAaesd8ltm.gif">
 						<h1 style="color:#333">MV* Era</h1>
+					</section>
+
+					<section>
+						<h1>ola2</h1>
 					</section>
 
 
