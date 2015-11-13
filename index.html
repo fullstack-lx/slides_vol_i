@@ -261,14 +261,14 @@ f(A) => B
 						<h2>Flux</h2>
 						<p>Facebook's pattern for data flow</p>
 
-						<img class="fragment" src="img/flux.png" height="300" width="1000" />
+						<img class="fragment" src="https://facebook.github.io/flux/img/flux-simple-f8-diagram-with-client-action-1300w.png" height="300" width="1000" />
 
 						<aside class="notes">
 
 						</aside>
 					</section>
 					<section>
-						<img src="img/flux.png" height="300" width="1000" />
+						<img src="https://facebook.github.io/flux/img/flux-simple-f8-diagram-with-client-action-1300w.png" height="300" width="1000" />
 						<ul>
 							<li> Single directional data flow </li>
 							<li> Actions are just plain Javascript objects </li>
@@ -289,7 +289,7 @@ f(A) => B
 					<section>
 						<h2> In comes Dan Abramov </h2>
 
-						<img src="img/dan.jpeg" height="248" width="248" />
+						<img src="https://pbs.twimg.com/profile_images/553711083064541184/9VsY9i09_400x400.jpeg" height="248" width="248" />
 
 						<h3> Goal </h3>
 
@@ -313,7 +313,7 @@ f(A) => B
 
 						<br/>
 
-						<p class="fragment"> Functional programming to JS </p>
+						<p class="fragment"> Welcomme FP to JS Apps </p>
 
 						<aside class="notes">
 							- A single store that contains the whole state of the App and is only a container. No logic
@@ -407,15 +407,45 @@ export default function counter(state = 0, action) {
 						<br/>
 						<p class="fragment"> Add side effects to the actions </p>
 						<p class="fragment"> Flow control </p>
-						<p class="fragment"> Augment the </p>
+						<p class="fragment"> Tooling </p>
 					</section>
 					<section>
-						Time Travel goodies?
+            <h2>Middlewares</h2>
 
-						console.log example
-						record actions example
-						record state example
+            <pre>
+              <code>
+const logger = store => next => action => {
+  console.log('dispatching', action)
+  let result = next(action)
+  console.log('next state', store.getState())
+  return result
+}
+              </code>
+            </pre>
 					</section>
+          <section>
+            <h2>Middlewares</h2>
+
+            <pre>
+              <code>
+const recorder = store => next => action => {
+  let result = next(action)
+
+  let history = JSON.parse(localStorage.getItem('history'))
+  history.push({
+    action
+    state: store.getState()
+  })
+  localStorage.setItem('history', JSON.stringify(history));
+
+  return result
+}
+              </code>
+            </pre>
+          </section>
+          <section data-background="http://i.giphy.com/PWATmSnHLCC1a.gif">
+            <h1>Goodies!</h1>
+          </section>
 					<section>
 						<h2>Thunk middleware</h2>
 
@@ -427,7 +457,7 @@ export function incrementAsync(delay = 1000) {
     setTimeout(() => {
       dispatch(increment(1));
     }, delay);
-  };
+  }
 }
 							</code>
 						</pre>
@@ -488,8 +518,9 @@ export function fetchGuests(event) {
 					</section>
 					<section>
 						<h2> Redux + React </h2>
+            <img src="http://i3.kym-cdn.com/entries/icons/original/000/007/582/tumblr_lmputme3co1qa6q7k_large.png" />
 
-						<p> Whole state goes into the root component </p>
+						<p> Redux store passes the whole state to the root component </p>
 						<p> All other components re-render themselves </p>
 						<p> But should they always re-render ? (wink wink Immutable.js) </p>
 
@@ -497,17 +528,37 @@ export function fetchGuests(event) {
 					<section>
 						<h2> Redux + React </h2>
 
-						Smart Components vs Dumb Components
-
-						<p> Smart component that provides the store </p>
-						<p> Maps the state to the underlying components </p>
-						<p> Passes handlers for bound action creators </p>
-
-						<p> Dumb components don't know the existence of redux </p>
-						<p> Just work with the props they were given </p>
-						<p> These components can be re-usable </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Smart Components</th>
+                  <th>Dumb Components</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Top level components </td>
+                  <td>Middle and leaf components </td>
+                </tr>
+                <tr>
+                  <td>Connected to redux</td>
+                  <td>Unanware of redux</td>
+                </tr>
+                <tr>
+                  <td>Subscribes to redux state</td>
+                  <td>Reads data from props</td>
+                </tr>
+                <tr>
+                  <td>Dispatch actions into redux</td>
+                  <td>Invoke callbacks from props</td>
+                </tr>
+              </tbody>
+            </table>
 					</section>
-				</section>
+          <section data-background="http://i.giphy.com/EdzcJPoDaaqaY.gif">
+            <h3>Thank you!</h3>
+          </section>
+        </section>
 
 				<section>
 					<section>
