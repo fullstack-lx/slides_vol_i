@@ -20,6 +20,13 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<!-- Printing and PDF exports -->
+		<script>
+			// Live reload
+			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+			 ':35729/livereload.js?snipver=1"></' + 'script>')
+		</script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -57,8 +64,7 @@
 				</section>
 
 				<section>
-					<section>
-						<h1> React </h1>
+					<section data-background="http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png">
 					</section>
 
 					<section>
@@ -84,13 +90,13 @@
 
 					<section>
 						<h1>So what?</h1>
-						<ol>
+						<ul>
 							<li>Refactoring was hedious</li>
 							<li>No structure/code architecture</li>
 							<li>Click baiting</li>
 							<li>All those memory leaks</li>
 							<li>SPA?<p class="fragment"> Good luck!</p></li>
-						</ol>
+						</ul>
 
 					</section>
 					<section data-background="http://i.giphy.com/rzspAaesd8ltm.gif">
@@ -99,8 +105,117 @@
 				</section>
 
 					<section>
-						<h1>ola2</h1>
+						<h1>Improvements!</h1>
+						<ul>
+							<li class="fragment">Structure...ish</li>
+							<li class="fragment">Model definition</li>
+							<li class="fragment">View definition</li>
+							<li class="fragment">Scoped selectors</li>
+							<li class="fragment">Bindings</li>
+						</ul>
 					</section>
+
+					<section data-background="http://i.giphy.com/PXclV9NHnqhQA.gif">
+						<h1>Yet... Bindings Hell</h1>
+					</section>
+
+					<section data-background="http://firstdoit.com/content/images/2015/05/mvc_dep_hell.png">
+					</section>
+
+					<section>
+						<h1>Enter React!</h1>
+						<p class="fragment">A new paradigm emerged</p>
+						<p class="fragment">Not a framework</p>
+					</section>
+
+					<section>
+						<h1>Functional Programming</h1>
+						<p class="fragment">Wat?</p>
+					</section>
+
+					<section data-background="http://i221.photobucket.com/albums/dd87/OneWingedRoxas/orlyquitevh4.jpg">
+					<h1 style="margin-top:60%;color:#333">Quite Rly</h1>
+					</section>
+
+					<section>
+						<p>"Entra porco, sai salsicha"</p>
+						<p class="fragment"><i>Insert a pig, get a sausage</i></p>
+						<pre style="margin-left:40%;width:20%">
+							<code data-trim>
+								f(A) => B
+f(A) => B
+(...)
+f(A) => B
+							</code>
+						</pre>
+					</section>
+
+					<section data-transition="fade">
+						<h3>Functional approach to DOM composition</h3>
+						<pre data-trim><code>
+			&lt;div&gt;
+			  &lt;h3&gt;OMG PONIES&lt;/h3&gt;
+			&lt;/div&gt;
+
+
+
+
+
+
+						</code></pre>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+					</section>
+					<section data-transition="fade">
+						<h3>Functional approach to DOM composition</h3>
+						<pre data-trim><code>
+			React.createElement(
+			  'div',
+			  null,
+			  React.createElement(
+			    'h3',
+			    null,
+			    'OMG PONIES'
+			  )
+			);
+						</code></pre>
+						<p class="fragment">Compositionable</p>
+						<p class="fragment">Declarative</p>
+					</section>
+
+					<section>
+						<h3>Let it sink</h3>
+						<pre data-trim><code>
+			&lt;div&gt;
+			  &lt;h3&gt;OMG PONIES&lt;/h3&gt;
+			&lt;/div&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<p>JSX</p>
+						<p>Babel</p>
+						<p class="fragment">github.com/Talkdesk/react-redux-boilerplate</p>
+					</section>
+
+					<section data-background="http://i.giphy.com/y8Mz1yj13s3kI.gif">
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<h1>Sharing is caring</h1>
+					</section>
+				</section>
+
+				<section>
+				<pre data-trim><code>
+
+				</code></pre>
+				</section>
 
 
 				<section>
