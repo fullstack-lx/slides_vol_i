@@ -157,7 +157,7 @@
 					</section>
 
 					<section>
-						<h2> Did this solve all our frustrations ? </h2>
+						<h2> Does this solve all our frustrations ? </h2>
 					</section>
 
 					<section data-background="http://i.giphy.com/kX5tZqZWyKxMI.gif">
@@ -188,6 +188,10 @@
 						<p class="fragment"> Single store </p>
 						<p class="fragment"> Reducers </p>
 
+						<br/>
+
+						<p class="fragment"> Functional programming to JS </p>
+
 						<aside class="notes">
 							- A single store that contains the whole state of the App and is only a container. No logic
 							- Reducers that are pure functions that receive a state and an action and return a new state
@@ -195,17 +199,62 @@
 					</section>
 
 					<section>
-						<h2> Redux </h2>
-						<p> Functional programming mindset </p>
-						<p> </p>
-					</section>
+						<h3> Single store </h3>
+						<ul>
+							<li> Contains the whole state of the App </li>
+							<li> Has no business logic </li>
+							<li> Is only a container </li>
+						</ul>
 
+					</section>
+					<section>
+						<h3> Reducers </h3>
+						<ul>
+							<li> Pure functions </li>
+							<li> Receive a state and an action </li>
+							<li> Return a new state </li>
+						</ul>
+					</section>
+					<section>
+						Code Examples ?
+					</section>
 					<section>
 						<h2>A predictable state container for Javascript Apps</h2>
 						<p class="fragment">What does that mean?</p>
-
 					</section>
 
+					<section>
+						<p class="fragment"> How the hell can I do something real with just this? </h2>
+						<p class="fragment"> What about side effects? </p>
+
+						<p class="fragment"> Did this solve our frustrations? </p>
+
+						<p class="fragment"> There is always something more ... </p>
+					</section>
+
+					<section>
+						<h2>Middlewares</h2>
+
+						<p class="fragment"> Before actions get to the reducers </p>
+						<p class="fragment"> Have acess to the action and the store </p>
+						<br/>
+						<p class="fragment"> Add side effects to the actions </p>
+						<p class="fragment"> Flow control </p>
+						<p class="fragment"> Augment the </p>
+					</section>
+					<section>
+						Time Travel goodies?
+
+						console.log example
+						record actions example
+						record state example
+					</section>
+					<section>
+						<h2>Thunk middleware</h2>
+
+						<p> Having async actions </p>
+						<p> Actions that execute in certain conditions </p>
+					</section>
 					<section>
 						<h2> How does this influence React ? </h2>
 
@@ -213,7 +262,25 @@
 
 					</section>
 					<section>
+						<h2> Redux + React </h2>
 
+						<p> Whole state goes into the root component </p>
+						<p> All other components re-render themselves </p>
+						<p> But should they always re-render ? (wink wink Immutable.js) </p>
+
+					</section>
+					<section>
+						<h2> Redux + React </h2>
+
+						Smart Components vs Dumb Components
+
+						<p> Smart component that provides the store </p>
+						<p> Maps the state to the underlying components </p>
+						<p> Passes handlers for bound action creators </p>
+
+						<p> Dumb components don't know the existence of redux </p>
+						<p> Just work with the props they were given </p>
+						<p> These components can be re-usable </p>
 					</section>
 				</section>
 
