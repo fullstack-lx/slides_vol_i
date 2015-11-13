@@ -41,6 +41,9 @@
 
 				<section >
 					<img src="https://pbs.twimg.com/profile_images/664837720049623040/35b0aLYT.png" style="border:0px">
+					<aside class="notes">
+					Disclaimer: We're not pros, we're starting and exploring
+					</aside>
 				</section>
 				<section>
 					<section>
@@ -72,11 +75,18 @@
 
 					<section>
 						<h2>But why?</h2>
+						<aside class="notes">
+							let's step back in time
+						</aside>
 					</section>
 
 					<section data-background="http://i.giphy.com/hn45V8hBhRIpW.gif">
 						<h2>First, let's step back in time</h2>
 						<p class="fragment">(Redux wink wink)</p>
+						<aside class="notes">
+							At first, jquery
+						</aside>
+
 					</section>
 
 					<section data-background="#ADAD00">
@@ -89,6 +99,17 @@
 							<li class="fragment">Mutation</li>
 							<li class="fragment">Mutation everywhere!</li>
 						</ul>
+						<aside class="notes">
+						Click binds everywhere
+						DOM pollution
+						Global scope selectors
+						code class="highlight">$(children).parent.parent.children</code>
+						Mutation
+						Mutation everywhere!
+						----
+						some disagreements on mutation
+						</aside>
+
 					</section>
 
 					<section>
@@ -96,6 +117,9 @@
 							<blockquote class="fragment twitter-tweet" lang="en"><p lang="en" dir="ltr">Make JavaScript More Mutable.</p>&mdash; Trump on JavaScript (@realDonaldJS) <a href="https://twitter.com/realDonaldJS/status/664540678836195328">November 11, 2015</a></blockquote>
 							<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</center>
+						<aside class="notes">
+						What problems did all this bring?
+						</aside>
 					</section>
 
 					<section>
@@ -107,8 +131,17 @@
 							<li>All those memory leaks</li>
 							<li>SPA?<p class="fragment"> Good luck!</p></li>
 						</ul>
+						<aside class="notes">
+						Refactoring was hedious
+						No structure/code architecture
+						Click baiting
+						All those memory leaks
+						SPA? Good luck
 
+						Our super savior, MV* era
+						</aside>
 					</section>
+
 					<section data-background="http://i.giphy.com/rzspAaesd8ltm.gif">
 						<h1 style="color:#333">MV* Era</h1>
 					</section>
@@ -122,6 +155,15 @@
 							<li class="fragment">Scoped selectors</li>
 							<li class="fragment">Bindings</li>
 						</ul>
+						<aside class="notes">
+						Structure...ish
+						Model definition
+						View definition
+						Scoped selectors
+						Bindings
+
+						Yet...
+						</aside>
 					</section>
 
 					<section data-background="http://i.giphy.com/PXclV9NHnqhQA.gif">
@@ -129,17 +171,30 @@
 					</section>
 
 					<section data-background="http://firstdoit.com/content/images/2015/05/mvc_dep_hell.png">
+					<aside class="notes">
+						From Facebook's presentation video
+						ENTER REACT
+					</aside>
 					</section>
 
 					<section>
 						<h1>Enter React!</h1>
 						<p class="fragment">A new paradigm emerged</p>
 						<p class="fragment">Not a framework</p>
+						<aside class="notes">
+							A new paradigm emerged
+							BTW, not a framework, "just" the V
+						</aside>
+
 					</section>
 
 					<section>
 						<h1>Functional Programming</h1>
 						<p class="fragment">Wat?</p>
+						<aside class="notes">
+						Really?
+						</aside>
+
 					</section>
 
 					<section data-background="http://i221.photobucket.com/albums/dd87/OneWingedRoxas/orlyquitevh4.jpg">
@@ -157,6 +212,10 @@ f(A) => B
 f(A) => B
 							</code>
 						</pre>
+						<aside class="notes">
+							No matter how many times you run it, it gives the same result
+						</aside>
+
 					</section>
 
 					<section data-transition="fade">
@@ -174,6 +233,10 @@ f(A) => B
 						</code></pre>
 						<p>&nbsp;</p>
 						<p>&nbsp;</p>
+						<aside class="notes">
+							This compiles to Javascript code
+						</aside>
+
 					</section>
 					<section data-transition="fade">
 						<h3>Functional approach to DOM composition</h3>
@@ -190,6 +253,10 @@ f(A) => B
 						</code></pre>
 						<p class="fragment">Composable</p>
 						<p class="fragment">Declarative</p>
+						<aside class="notes">
+							Composable
+							Declarative
+						</aside>
 					</section>
 
 					<section>
@@ -199,11 +266,20 @@ f(A) => B
 		  &lt;h3&gt;OMG PONIES&lt;/h3&gt;
 		&lt;/div&gt;
 						</code></pre>
+						<aside class="notes">
+							The DOM elements are code
+
+							Another awesome feature: Virtual DOM
+						</aside>
 					</section>
 
 					<section>
 						<h1>Virtual DOM</h1>
 						<img src="http://techblog.constantcontact.com/wp-content/uploads/2014/11/TechTalk_BAnderson_11052014_Image7.png">
+						<aside class="notes">
+						We'll show you some code which uses
+						</aside>
+
 					</section>
 
 					<section>
@@ -211,6 +287,10 @@ f(A) => B
 						<p>JSX</p>
 						<p>Babel</p>
 						<p class="fragment">github.com/Talkdesk/react-redux-boilerplate</p>
+						<aside class="notes">
+						  we made a repo public where you can play around with everything we're presenting
+						</aside>
+
 					</section>
 
 					<section data-background="http://i.giphy.com/y8Mz1yj13s3kI.gif">
@@ -223,10 +303,18 @@ f(A) => B
 						<p>&nbsp;</p>
 						<p>&nbsp;</p>
 						<h1>Sharing is caring</h1>
+						<aside class="notes">
+						Enough of slides!
+						</aside>
+
 					</section>
 
 					<section>
 						<h1>coding time!</h1>
+					</section>
+
+					<section data-background="http://i.giphy.com/12KiGLydHEdak8.gif">
+
 					</section>
 
 					<section data-background="http://i.giphy.com/EdzcJPoDaaqaY.gif">
