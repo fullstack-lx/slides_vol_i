@@ -330,8 +330,52 @@ f(A) => B
 							<li> Return a new state </li>
 						</ul>
 					</section>
+					<section data-background="http://i.giphy.com/zXmbOaTpbY6mA.gif">
+						<h2> Let's look at some code! </h2>
+					</section>
 					<section>
-						Code Examples ?
+						<h2> Actions </h2>
+
+						<pre>
+							<code>
+export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
+
+export function increment(value) {
+  return {
+    type: INCREMENT_COUNTER,
+    value
+  };
+}
+
+export function decrement(value) {
+  return {
+    type: DECREMENT_COUNTER,
+    value
+  };
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2> Reducers </h2>
+
+						<pre>
+							<code>
+import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actions';
+
+export default function counter(state = 0, action) {
+  switch (action.type) {
+    case INCREMENT_COUNTER:
+      return state + action.value;
+    case DECREMENT_COUNTER:
+      return state - action.value;
+    default:
+      return state;
+  }
+}
+							</code>
+						</pre>
 					</section>
 					<section>
 						<h2>A predictable state container for Javascript Apps</h2>
@@ -368,7 +412,65 @@ f(A) => B
 						<h2>Thunk middleware</h2>
 
 						<p> Having async actions </p>
+						<pre>
+							<code>
+export function incrementAsync(delay = 1000) {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(increment(1));
+    }, delay);
+  };
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Thunk middleware</h2>
+
 						<p> Actions that execute in certain conditions </p>
+						<pre>
+							<code>
+export function incrementIfOdd() {
+  return (dispatch, getState) => {
+    const { counter } = getState();
+
+    if (counter % 2 === 0) {
+      return;
+    }
+
+    dispatch(increment(1));
+  };
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Thunk middleware</h2>
+
+						<p> Async actions and promises </p>
+						<pre>
+							<code>
+export function fetchGuests(event) {
+  return function (dispatch) {
+
+    dispatch({
+      type: REQUEST_GUESTS,
+      event
+    });
+
+    return fetch(`http://www.meetup.com/${event}`)
+      .then(response => dispatch({
+            type: RECEIVE_GUESTS,
+            reponse: json
+          }),
+          error => dispatch({
+            type: ERROR_GUESTS,
+            error
+          }));
+  }
+}
+							</code>
+						</pre>
 					</section>
 					<section>
 						<h2> How does this influence React ? </h2>
